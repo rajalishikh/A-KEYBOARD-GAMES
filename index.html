@@ -18,8 +18,8 @@
       class="bg-[#1E1E1E] bg-[url(image/background.png)] bg-center min-h-screen bg-no-repeat"
     >
       <!-- home page start  -->
-      <section
-        class="flex justify-center items-center min-h-screen gap-3 hidden"
+      <section id="home_page"
+        class="flex justify-center items-center min-h-screen gap-3 "
       >
         <div class="text-center">
           <div>
@@ -30,7 +30,7 @@
           </div>
 
           <div class="mt-5">
-            <button class="bg-[#FFFFFF] text-black p-3 rounded-md">
+            <button onclick="add_hidden()" class="bg-[#FFFFFF] text-black p-3 rounded-md">
               Play Now
             </button>
           </div>
@@ -39,7 +39,7 @@
       <!-- home page End  -->
 
       <!-- keyboard section start  -->
-      <section class="hidden">
+      <section id="keyboard_page" class="hidden">
          <!-- screen section  -->
         <div>
          
@@ -124,7 +124,7 @@
       <!-- keyboard section end  -->
 
       <!-- final score section start  -->
-      <section class="flex justify-center items-center min-h-screen ">
+      <section class="flex justify-center items-center min-h-screen hidden ">
         <div class=" bg-[#FFFFFF33]  text-white space-y-6 p-4 rounded-lg">
           <div class="text-center  ">
             <h4 class="text-8xl font-semibold">Score :
@@ -142,5 +142,9 @@
       </section>
       <!-- final section end  -->
     </section>
+
+    <!-- javaScript connection point -->
+     <script src="/javaScript/utility.js"></script>
+     <script src="/javaScript/all.js"></script>
   </body>
 </html>
