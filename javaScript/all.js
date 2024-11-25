@@ -31,6 +31,12 @@ if(latter === find_random_latter_text){
      let new_life=find_id_to_int-1;
      let set_life=document.getElementById('Life_part');
      set_life.innerText=new_life
+    //  add condition when life is zero 
+
+     if(find_id_to_int==0){
+        show_the_score_part()
+
+     }
 }
     
 }
@@ -52,6 +58,23 @@ function game_start(){
     add_Class_name('home_page')
     remove_class_name('keyboard_page')
     continue_game()
+    
+
+}
+
+function show_the_score_part(){
+    add_Class_name('home_page')
+    add_Class_name('keyboard_page')
+    remove_class_name('final_score')
+    
+}
+
+function play_again(){
+    add_Class_name('home_page')
+    add_Class_name('final_score')
+    remove_class_name('keyboard_page')
+    setElement('Life_part',5)
+    setElement('score_id',0)
     
 
 }

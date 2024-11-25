@@ -33,6 +33,11 @@ function find_id(element){
     return find_id_text
 }
 
+function setElement(element,value){
+    let x=document.getElementById(element)
+    x.innerText=value
+}
+
 
 // make random number
 
