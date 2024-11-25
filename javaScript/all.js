@@ -2,19 +2,19 @@
 
 function keyup(event){
     let latter=event.key
-   console.log('user press',latter)
+//    console.log('user press',latter)
 //    find the latter which come screen randomly
 let find_random_latter=document.getElementById('screen_output');
 let find_random_latter_text=find_random_latter.innerText.toLowerCase()
-console.log('randomly come latter',find_random_latter_text)
+// console.log('randomly come latter',find_random_latter_text)
 
 // find the scoring part 
 let scorePart=find_id("score_id")
 let scorePart_int=parseInt(scorePart)
-console.log('score part',scorePart_int)
+// console.log('score part',scorePart_int)
 
 if(latter === find_random_latter_text){
-    console.log('Plyer press the right button')
+    // console.log('Plyer press the right button')
     
     let newScore=scorePart_int+1;
     console.log("total",scorePart_int)
@@ -41,6 +41,7 @@ if(latter === find_random_latter_text){
     
 }
 
+// find the value when the user press keyboard 
 document.addEventListener('keyup',keyup)
 // continue the game 
 
@@ -61,20 +62,28 @@ function game_start(){
     
 
 }
+// show the final score part 
 
 function show_the_score_part(){
     add_Class_name('home_page')
     add_Class_name('keyboard_page')
     remove_class_name('final_score')
+    let find_last_score=find_id('score_id')
+    setElement('final_output_total',find_last_score)
+    
+    
     
 }
 
+// play again part
 function play_again(){
     add_Class_name('home_page')
     add_Class_name('final_score')
     remove_class_name('keyboard_page')
     setElement('Life_part',5)
     setElement('score_id',0)
+
+    
     
 
 }
