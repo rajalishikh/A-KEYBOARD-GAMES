@@ -6,7 +6,7 @@ function add_Class_name(element){
 
 }
 
-// kick out remove 
+// kick out hidden 
 
 function remove_class_name(element){
     let y=document.getElementById(element);
@@ -19,6 +19,20 @@ function set_random_color(element){
     let x=document.getElementById(element)
     x.classList.add('bg-orange-500')
 }
+// remove random color
+function remove_random_color(element){
+    let x=document.getElementById(element)
+    x.classList.remove('bg-orange-500')
+} 
+
+// find the id 
+
+function find_id(element){
+    let find_id=document.getElementById(element)
+    let find_id_text=find_id.innerText;
+    return find_id_text
+}
+
 
 // make random number
 

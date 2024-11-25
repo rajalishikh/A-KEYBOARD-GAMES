@@ -1,3 +1,41 @@
+// keypress section 
+
+function keyup(event){
+    let latter=event.key
+   console.log('user press',latter)
+//    find the latter which come screen randomly
+let find_random_latter=document.getElementById('screen_output');
+let find_random_latter_text=find_random_latter.innerText.toLowerCase()
+console.log('randomly come latter',find_random_latter_text)
+
+// find the scoring part 
+let scorePart=find_id("score_id")
+let scorePart_int=parseInt(scorePart)
+console.log('score part',scorePart_int)
+
+if(latter === find_random_latter_text){
+    console.log('Plyer press the right button')
+    
+    let newScore=scorePart_int+1;
+    console.log("total",scorePart_int)
+    let set=document.getElementById('score_id')
+    set.innerText=newScore
+    
+
+    continue_game()
+    remove_random_color(find_random_latter_text)
+}else{
+    console.log("Dhur vhiya ba apu right button press koro ")
+    let find_life=find_id('Life_part');
+    let find_id_to_int=parseInt(find_life)
+     let new_life=find_id_to_int-1;
+     let set_life=document.getElementById('Life_part');
+     set_life.innerText=new_life
+}
+    
+}
+
+document.addEventListener('keyup',keyup)
 // continue the game 
 
 function continue_game(){
